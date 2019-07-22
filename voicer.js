@@ -35,6 +35,7 @@ function readOutLoud(message){
     }
     if(message.includes('weather')){
 
+        const finalweather= weather[0];
         speech.text=finalweather;
     }
     if(message.includes('how do I look')){
