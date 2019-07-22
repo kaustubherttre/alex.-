@@ -27,7 +27,7 @@ btn.addEventListener('click',()=> {recognition.start()});
 function readOutLoud(message){
     
     const speech= new SpeechSynthesisUtterance();
-    speech.text='buzzinga';
+    speech.text='sorry my programmer isnt that good so what you said isnt in my vocab';
     if(message.includes('how are you')){
 
        const final= greetings[Math.floor(Math.random() *3)];
