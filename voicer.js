@@ -27,7 +27,7 @@ btn.addEventListener('click',()=> {recognition.start()});
 function readOutLoud(message){
     
     const speech= new SpeechSynthesisUtterance();
-    speech.text='sorry my programmer isnt that good so the word you said is not in my vocabulary';
+    speech.text="sorry my programmer isn't that good so the word you said is not in my vocabulary";
     if(message.includes('how are you')){
 
        const final= greetings[Math.floor(Math.random() *3)];
