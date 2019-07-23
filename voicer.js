@@ -11,7 +11,7 @@ const time=['Its time for you to kill yourself, you lonely peice of shit'];
 const pizza=['you are like a food incenerator'];
 const vit=['its a shithole'];
 const jail=['jai,mathaa dee'];
-const sp=['This is for my girl meghna, i love yaa'];
+const sp=['This is for my girl meghna, i love you'];
 const hi=['Im not your assistant use google for this gay shit',' noob'];
  
 
