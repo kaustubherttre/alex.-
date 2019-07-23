@@ -6,7 +6,7 @@ const greetings=['Im good you little turd',
                 'Just because you dont have friends you made me so other than asking me how iam, why dont you step out of the room and look what real people do'
                 ,'Even when im going shitty its better than you'];
 const weather=['You should hope that is raining, fucking non a c room scumbag'];
-const ff=['Even when i cant see you your ugliness is resonating around this laptop'];
+const ff=['Even when i cant see you your ugliness is resonating around this device'];
 const time=['Its time for you to kill yourself, you lonely peice of shit'];
 const pizza=['you are like a food incenerator'];
 const vit=['its a shithole'];
@@ -29,7 +29,7 @@ btn.addEventListener('click',()=> {recognition.start()});
 function readOutLoud(message){
     
     const speech= new SpeechSynthesisUtterance();
-    speech.text="sorry my programmer is tatti that good so the word you said is not in my vocabulary";
+    speech.text="sorry my programmer isn't that good so the word you said is not in my vocabulary";
     if(message.includes('how are you')){
 
        const final= greetings[Math.floor(Math.random() *3)];
