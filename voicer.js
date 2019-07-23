@@ -60,18 +60,20 @@ function readOutLoud(message){
         const finaltiasme= vit[0];
         speech.text=finaltiasme;
     }
-    if(message.includes('alex jor se bolo')){
-        const fini=jail[0];
-        speech.text=fini;
-    }
+    
      if(message.includes('special message')){
         const his= sp[0];
        speech.text=sp;
     }
     if(message.includes('hello')){
-        const his= sp[0];
+        const his= hi[0];
        speech.text=his;
     }
+   if(message.includes('hi')){
+        const his= hi[0];
+       speech.text=his;
+    }
+    
     
     
     speech.volume=1;
