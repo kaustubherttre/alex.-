@@ -11,6 +11,8 @@ const time=['Its time for you to kill yourself, you lonely peice of shit'];
 const pizza=['you are like a food incenerator'];
 const vit=['its a shithole'];
 const jail=['jai,mathaa dee'];
+const sp=['This is for my girl meghna, i love yaa'];
+const hi=['Im not your assistant use google for this gay shit',' noob'];
  
 
 recognition.onstart= function(){
@@ -62,7 +64,14 @@ function readOutLoud(message){
         const fini=jail[0];
         speech.text=fini;
     }
-     
+     if(message.includes('special message')){
+        const his= sp[0];
+       speech.text=sp;
+    }
+    if(message.includes('hello')){
+        const his= sp[0];
+       speech.text=his;
+    }
     
     
     speech.volume=1;
