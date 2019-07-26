@@ -13,6 +13,7 @@ const vit=['its a shithole'];
 const jail=['jai,mathaa dee'];
 const sp=['This is for my girl meghna, i love you'];
 const hi=['Im not your assistant use google for this gay shit',' noob'];
+const bio=['it was only fun in the first week of class 12'];
  
 
 recognition.onstart= function(){
@@ -73,7 +74,10 @@ function readOutLoud(message){
         const his= hi[0];
        speech.text=his;
     }
-    
+   if(message.includes('bio')){
+        const hiss= bio[0];
+       speech.text=hiss;
+    }
     
     
     speech.volume=1;
