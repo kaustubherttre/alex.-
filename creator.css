@@ -67,8 +67,8 @@ body,html{
         display: block;
         content: '';
         position: absolute;
-        width: 250px;
-        height: 250px;
+        width: 251px;
+        height: 251px;
         background-color: darkblue;
         color-interpolation-filters: linearRGB;
         border-radius: 75px;
