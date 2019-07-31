@@ -12,6 +12,7 @@ const pizza=['you are like a food incenerator'];
 const vit=['its a shithole'];
 const jail=['jai,mathaa dee'];
 const hi=['Im not your assistant use google for this gay shit',' noob'];
+const alex=['All these bitches aint loyal, use me'];
 
 const rain=['just wait for tommorow morning when the sun is out and its humid as fuck'];
  
@@ -81,6 +82,11 @@ function readOutLoud(message){
         const hisd= rain[0];
        speech.text=hisd;
     }
+    if(message.includes('assistant')){
+      const lol=alex[0];
+      speech.text=lol;
+    }
+  
      
     
     
