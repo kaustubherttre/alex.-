@@ -1,0 +1,97 @@
+const btn=document.querySelector('.Salt-master');
+const content = document.querySelector('.whatusaid');
+const SpeechRecognition=window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition= new SpeechRecognition();
+const greetings=['Im good you little turd'];
+
+const weather=['You should hope that is raining, fucking non a c room scumbag'];
+const ff=['Even when i cant see you your ugliness is resonating around this laptop'];
+const time=['Its time for you to kill yourself, you lonely peice of shit'];
+const pizza=['you are like a food incenerator'];
+const vit=['its a shithole'];
+const jail=['jai,mathaa dee'];
+const hi=['Im not your assistant use google for this gay shit',' noob'];
+const alexa=['All these hoez aint loyal, USE ME'];
+
+const rain=['just wait for tommorow morning when the sun is out and its humid as fuck'];
+ 
+
+recognition.onstart= function(){
+    console.log('voice is activated');
+
+};
+recognition.onresult=function(event){
+    const current=event.resultIndex;
+    const transcript=event.results[current][0].transcript;
+    content.textContent=transcript;
+    readOutLoud(transcript);
+};
+btn.addEventListener('click',()=> {recognition.start()});   
+function readOutLoud(message){
+    
+    const speech= new SpeechSynthesisUtterance();
+    speech.text="sorry my programmer isn't that good so the word you said is not in my vocabulary";
+    if(message.includes('how are you')){
+
+       const final= greetings[Math.floor(Math.random() *3)];
+       speech.text=final;
+    }
+    if(message.includes('weather')){
+
+        const finalweather= weather[0];
+        speech.text=finalweather;
+    }
+    if(message.includes('how do I look')){
+
+        const finallook= ff[0];
+        speech.text=finallook;
+    }
+    if(message.includes('time')){
+
+        const finaltime= time[0];
+        speech.text=finaltime;
+    }
+    if(message.includes('pizza')){
+
+        const finaltiame= pizza[0];
+        speech.text=finaltiame;
+    }
+    if(message.includes('VIT')){
+
+        const finaltiasme= vit[0];
+        speech.text=finaltiasme;
+    }
+    if(message.includes('jor se bolo')){
+        const fini=jail[0];
+        speech.text=fini;
+    }
+    if(message.includes('hi')){
+        const his=hi[Math.floor(Math.random() *2)];
+       speech.text=his;
+    }
+    if(message.includes('special message')){
+        const his= sp[0];
+       speech.text=sp;
+    }
+    if(message.includes('hello')){
+        const his= hi[1];
+       speech.text=his;
+    }
+    if(message.includes('raining')){
+        const hisd= rain[0];
+       speech.text=hisd;
+    }
+    if(message.includes('assistant')){
+
+        const alexa1=alexa[0];
+        speech.text=alexa1;
+    }
+     
+    
+    
+    speech.volume=1;
+    speech.rate=1.2;
+    speech.pitch= 10;
+    
+    window.speechSynthesis.speak(speech);
+}
