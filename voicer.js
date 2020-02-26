@@ -45,11 +45,11 @@ function readOutLoud(message){
         window.open(url);
     }
     
-    if(message.includes('symptoms')){
+    if(message.includes('information')){
         
         const alexa1=corona[0];
         speech.text=alexa1;
-        url="https://www.google.com/search?sxsrf=ALeKk00Pqq043P6gRtPFiKFnvg11kfXtNA%3A1582350615174&ei=F8FQXsmZCrqQ4-EPgbqk8A0&q=give+information+about+corona+virus&oq=give+information+about+corona+virus&gs_l=psy-ab.3...41111.51510..51713...2.1..0.118.2291.19j8......0....1..gws-wiz.......0i71j35i39j0i131i67j0i131j0i67j0j0i273j0i70i255j33i22i29i30.XWUq18rlWEM&ved=0ahUKEwiJgc-yu-TnAhU6yDgGHQEdCd4Q4dUDCAs&uact=5";
+        url="https://www.google.com/search?q=information+on+coronavirus&oq=information+on+corora&aqs=chrome.2.69i57j0l7.14395j0j7&sourceid=chrome&ie=UTF-8";
         window.open(url);
     }
 
