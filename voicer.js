@@ -2,18 +2,12 @@ const btn=document.querySelector('.Salt-master');
 const content = document.querySelector('.whatusaid');
 const SpeechRecognition=window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition= new SpeechRecognition();
-const greetings=['Im good you little turd'];
+
 const weather=['Opening temperature Information'];
-const ff=['Even when i cant see you your ugliness is resonating around this laptop'];
-const time=['Its time for you to kill yourself, you lonely peice of shit'];
-const pizza=['you are like a food incenerator'];
-const vit=['its a shithole'];
-const jail=['jai,mathaa dee'];
-const hi=['Im not your assistant use google for this gay shit',' noob'];
-const alexa=['All these hoez aint loyal, USE ME'];
+
 const hospitals=['Opening the list of Hospitals near you'];
 const corona=['Opening information on corona virus'];
-const rain=['just wait for tommorow morning when the sun is out and its humid as fuck'];
+
  
 
 recognition.onstart= function(){
@@ -51,7 +45,7 @@ function readOutLoud(message){
         window.open(url);
     }
     
-    if(message.includes('corona')){
+    if(message.includes('symptoms')){
         
         const alexa1=corona[0];
         speech.text=alexa1;
