@@ -3,8 +3,7 @@ const content = document.querySelector('.whatusaid');
 const SpeechRecognition=window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition= new SpeechRecognition();
 const greetings=['Im good you little turd'];
-
-const weather=['You should hope that is raining, fucking non a c room scumbag'];
+const weather=['Opening temperature Information'];
 const ff=['Even when i cant see you your ugliness is resonating around this laptop'];
 const time=['Its time for you to kill yourself, you lonely peice of shit'];
 const pizza=['you are like a food incenerator'];
@@ -12,7 +11,8 @@ const vit=['its a shithole'];
 const jail=['jai,mathaa dee'];
 const hi=['Im not your assistant use google for this gay shit',' noob'];
 const alexa=['All these hoez aint loyal, USE ME'];
-
+const hospitals=['Opening the list of Hospitals near you'];
+const corona=['Opening information on corona virus'];
 const rain=['just wait for tommorow morning when the sun is out and its humid as fuck'];
  
 
@@ -30,7 +30,7 @@ btn.addEventListener('click',()=> {recognition.start()});
 function readOutLoud(message){
     
     const speech= new SpeechSynthesisUtterance();
-    speech.text="sorry my programmer isn't that good so the word you said is not in my vocabulary";
+    speech.text="This is not a recognzied sentence";
     if(message.includes('how are you')){
 
        const final= greetings[Math.floor(Math.random() *3)];
@@ -40,52 +40,25 @@ function readOutLoud(message){
 
         const finalweather= weather[0];
         speech.text=finalweather;
+        url="https://www.google.com/search?q=how+is+the+weather&oq=how+is+the+&aqs=chrome.1.69i57j0l7.3116j1j7&sourceid=chrome&ie=UTF-8";
+        window.open(url);
     }
-    if(message.includes('how do I look')){
+    if(message.includes('hospitals')){
 
-        const finallook= ff[0];
-        speech.text=finallook;
-    }
-    if(message.includes('time')){
-
-        const finaltime= time[0];
-        speech.text=finaltime;
-    }
-    if(message.includes('pizza')){
-
-        const finaltiame= pizza[0];
-        speech.text=finaltiame;
-    }
-    if(message.includes('VIT')){
-
-        const finaltiasme= vit[0];
-        speech.text=finaltiasme;
-    }
-    if(message.includes('jor se bolo')){
-        const fini=jail[0];
-        speech.text=fini;
-    }
-    if(message.includes('hi')){
-        const his=hi[Math.floor(Math.random() *2)];
-       speech.text=his;
-    }
-    if(message.includes('special message')){
-        const his= sp[0];
-       speech.text=sp;
-    }
-    if(message.includes('hello')){
-        const his= hi[1];
-       speech.text=his;
-    }
-    if(message.includes('raining')){
-        const hisd= rain[0];
-       speech.text=hisd;
-    }
-    if(message.includes('assistant')){
-
-        const alexa1=alexa[0];
+        const alexa1=hospitals[0];
         speech.text=alexa1;
+        url="https://www.google.com/search?q=hospitals+near+me&oq=hospitals+&aqs=chrome.0.0j69i57j0l6.3686j0j7&sourceid=chrome&ie=UTF-8";
+        window.open(url);
     }
+    
+    if(message.includes('corona')){
+        
+        const alexa1=corona[0];
+        speech.text=alexa1;
+        url="https://www.google.com/search?sxsrf=ALeKk00Pqq043P6gRtPFiKFnvg11kfXtNA%3A1582350615174&ei=F8FQXsmZCrqQ4-EPgbqk8A0&q=give+information+about+corona+virus&oq=give+information+about+corona+virus&gs_l=psy-ab.3...41111.51510..51713...2.1..0.118.2291.19j8......0....1..gws-wiz.......0i71j35i39j0i131i67j0i131j0i67j0j0i273j0i70i255j33i22i29i30.XWUq18rlWEM&ved=0ahUKEwiJgc-yu-TnAhU6yDgGHQEdCd4Q4dUDCAs&uact=5";
+        window.open(url);
+    }
+
      
     
     
